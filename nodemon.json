@@ -1,0 +1,10 @@
+{
+    "env": {
+        "MYSQL_DB": "node-complete",
+        "MYSQL_USER": "root",
+        "MYSQL_PWD": "poladva1",
+        "MYSQL_LINK": "localhost",
+        "NODE_ENV": "production"
+        
+    }
+}
