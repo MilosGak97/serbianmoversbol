@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize(`${process.env.MYSQL_DB}`, `${process.env.MYSQL_USER}`, `${process.env.MYSQL_PWD}`, {
   dialect: 'mysql',
-  host: `${process.env.MYSQL_HOST}`
+  host: 'serbianmoversllc.cpi6e39gnpl9.us-east-2.rds.amazonaws.com'
 });
 
 module.exports = sequelize;
