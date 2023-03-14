@@ -36,9 +36,6 @@ sequelize.authenticate()
   /* ----------------- END SEQUEKL
 
 
-
-
-
 /* MYSQL_URI TEST */
 const MYSQL_URI = `mysql://milosgak:TheDVTN2020@mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com:3306/node-complete`;
 
