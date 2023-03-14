@@ -7,15 +7,15 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
-/*
+
 const sequelize = require('./util/database');
-*/
+
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-/* ------------- SEQUELIZE CONNECTION -------------- */
+/* ------------- SEQUELIZE CONNECTION -------------- 
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020', {
@@ -33,7 +33,7 @@ sequelize.authenticate()
     console.error('Unable to connect to the database:', error);
   });
 
-  /* ----------------- END SEQUEKL
+  /* ----------------- END SEQUEKL */
 
 
 /* MYSQL_URI TEST */
