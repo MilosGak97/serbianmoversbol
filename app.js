@@ -15,6 +15,30 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+/* ------------- SEQUELIZE CONNECTION -------------- */
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020', {
+  host: 'mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com',
+  dialect: 'mysql',
+  logging: true, 
+  port: 3306
+});
+
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch((error) => {
+    console.error('Unable to connect to the database:', error);
+  });
+
+  /* ----------------- END SEQUEKL
+
+
+
+
+
 /* MYSQL_URI TEST */
 const MYSQL_URI = `mysql://milosgak:TheDVTN2020@mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com:3306/node-complete`;
 
