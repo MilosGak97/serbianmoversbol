@@ -8,6 +8,10 @@ router.get('/login', customerController.GETlogin);
 
 router.get('/login2', customerController.GETlogin2);
 
+router.post('/login235', () => {
+    res.send('Hello World');
+});
+
 router.post('/login',customerController.POSTlogin);
 
 router.use('/mybol', customerController.viewBOL);
