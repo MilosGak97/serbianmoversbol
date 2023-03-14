@@ -3,15 +3,6 @@ const mysql2 = require('mysql2')
 
 const sequelize = require('../util/database');
 
-sequelize.authenticate()
-  .then(() => {
-    console.log('Connection has been established successfully in move.js file');
-  })
-  .catch((error) => {
-    console.error('Unable to connect to the database in move.js file:', error);
-  });
-  console.log("Pored seuqelize checkera u move.js");
-
 
 const Move = sequelize.define('move',{
     id: {
