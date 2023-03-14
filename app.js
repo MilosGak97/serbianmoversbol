@@ -10,6 +10,14 @@ const morgan = require('morgan');
 
 const sequelize = require('./util/database');
 
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully in app.js file');
+  })
+  .catch((error) => {
+    console.error('Unable to connect to the database in app.js file:', error);
+  });
+
 const app = express();
 
 app.set('view engine', 'ejs');
