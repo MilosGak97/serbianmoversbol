@@ -1,16 +1,4 @@
-const mysql2 = require('mysql2');
-
 const Move = require('../models/move');
-const session = require('express-session');
-const multer = require('multer'); // a
-const upload = multer(); // a
-const path = require('path');
-const fs = require('fs');
-
-const crypto = require('crypto');
-
-const sharp = require('sharp');
-
 
 exports.GETlogin = (req,res,next) => {
     if(req.session.moveid == true){
@@ -25,15 +13,21 @@ exports.GETlogin = (req,res,next) => {
 exports.POSTlogin = (req,res,next) => {
     const email = req.body.email;
     const passcode = req.body.passcode;
+    console.log(email);
+    console.log(passcode);
+    
 
+    console.log("Outside move.findall.then");
     Move.findAll({
         where: {
             email: email,
             passcode: passcode
         }
     }).then(results => {
+        console.log("Inside move.findall.then");
         if(results.length > 0){
         const result = results[0];
+        console.log(result);
         req.session.moveid = result.id;
         res.redirect(`/mybol`);
         }else{
