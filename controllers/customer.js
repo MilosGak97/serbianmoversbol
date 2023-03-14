@@ -15,8 +15,6 @@ exports.POSTlogin = (req,res,next) => {
     const passcode = req.body.passcode;
     console.log(email);
     console.log(passcode);
-    
-
     console.log("Outside move.findall.then");
     Move.findAll({
         where: {
@@ -25,14 +23,16 @@ exports.POSTlogin = (req,res,next) => {
         }
     }).then(results => {
         console.log("Inside move.findall.then");
+        /*
         if(results.length > 0){
         const result = results[0];
         console.log(result);
-        req.session.moveid = result.id;
+        req.session.moveid = result.id; 
         res.redirect(`/mybol`);
         }else{
             res.redirect("/login");
         }
+        */
     }).catch( err =>    {
         console.log(err);
     })

@@ -10,6 +10,7 @@ sequelize.authenticate()
   .catch((error) => {
     console.error('Unable to connect to the database in move.js file:', error);
   });
+  console.log("Pored seuqelize checkera u move.js");
 
 
 const Move = sequelize.define('move',{
