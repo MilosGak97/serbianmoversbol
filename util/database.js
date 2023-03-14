@@ -1,7 +1,6 @@
 
-/* radeca verzija
 const Sequelize = require('sequelize');
-
+/* radeca verzija
 const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020',  {
   dialect: 'mysql',
   host: 'mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com',
@@ -28,6 +27,8 @@ const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020', {
   port: 3306
 });
 
+/*
+
 sequelize.authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
@@ -35,6 +36,8 @@ sequelize.authenticate()
   .catch((error) => {
     console.error('Unable to connect to the database:', error);
   });
+
+  */
 
   
 module.exports = sequelize;
