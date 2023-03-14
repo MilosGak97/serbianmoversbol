@@ -12,6 +12,17 @@ const crypto = require('crypto');
 const sharp = require('sharp');
 
 
+exports.GETlogin2 = (req,res,next) => {
+    if(req.session.moveid == true){
+        res.redirect('/mybol');
+    }else{
+        res.render('customer/login',{
+            pageTitle: "View Bill of Ladding"
+        });
+    }
+}
+
+
 exports.GETlogin = (req,res,next) => {
     if(req.session.moveid == true){
         res.redirect('/mybol');
