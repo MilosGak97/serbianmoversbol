@@ -6,13 +6,14 @@ const router = express.Router();
 router.get('/login', customerController.GETlogin);
 
 
-router.post('/login', (req, res) => {
+router.get('/login2', (req, res) => {
     console.log("INSIDE ROUTER POST REQUEST");
+    console.log(req.query.email);
     res.send("Hello World!");
     // Your code logic goes here
     });
 
-    
+
 /*
 router.post('/login',customerController.POSTlogin);
 */
