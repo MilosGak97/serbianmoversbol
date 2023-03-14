@@ -4,7 +4,18 @@ const customerController = require('../controllers/customer');
 const router = express.Router();
 
 router.get('/login', customerController.GETlogin);
+
+
+router.post('/login', (req, res) => {
+    console.log("INSIDE ROUTER POST REQUEST");
+    res.send("Hello World!");
+    // Your code logic goes here
+    });
+
+    
+/*
 router.post('/login',customerController.POSTlogin);
+*/
  /*
 router.use('/mybol', customerController.viewBOL);
 
