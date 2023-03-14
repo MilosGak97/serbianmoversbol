@@ -15,6 +15,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+/* MYSQL_URI TEST */
+const MYSQL_URI = `mysql://milosgak:TheDVTN2020@mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com:3306/node-complete`;
+
 /* JEAAAAAJ */
 const adminRoutes = require('./routes/admin');
 const customerRoutes = require('./routes/customer');

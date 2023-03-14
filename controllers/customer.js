@@ -1,3 +1,5 @@
+const mysql2 = require('mysql2');
+
 const Move = require('../models/move');
 const session = require('express-session');
 const multer = require('multer'); // a
