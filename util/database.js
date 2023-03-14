@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020', {
-  dialect: 'mysql',
+const sequelize = new Sequelize('node-complete', 'milosgak', 'TheDVTN2020', 'mysql', {
   host: 'mydb.cpi6e39gnpl9.us-east-2.rds.amazonaws.com',
-  port: 3306 // Replace with the actual port number
+  port: 3306
 });
+
 module.exports = sequelize;
 
 
